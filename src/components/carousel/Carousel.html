@@ -1,0 +1,26 @@
+<div class="carousel">
+    <slot></slot>
+
+    <button
+            @click="previous"
+            class="carousel-nav carousel-previous"
+            title="Previous"
+    >
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button
+            @click="next"
+            class="carousel-nav carousel-next"
+            title="Next"
+    >
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="carousel-pagination">
+        <button
+                v-for="n in count"
+                @click="goTo(n - 1)"
+                :class="{active: isSlideActive(n - 1)}"
+        ></button>
+    </div>
+</div>

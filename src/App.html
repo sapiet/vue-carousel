@@ -1,0 +1,10 @@
+<div id="app">
+    <carousel>
+        <carousel-slide v-for="(slide, index) in slides" :key="index" :index="index">
+            <img :src="slide.image" :alt="slide.caption">
+            <div class="caption">
+                {{ slide.caption }}
+            </div>
+        </carousel-slide>
+    </carousel>
+</div>

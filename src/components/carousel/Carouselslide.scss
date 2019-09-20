@@ -1,0 +1,65 @@
+$duration: 1s;
+
+.slide {
+
+}
+
+.slide-right-enter-active {
+  animation: slideRightIn $duration ease-in-out;
+}
+
+.slide-right-leave-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  animation: slideRightOut $duration ease-in-out;
+}
+
+@keyframes slideRightIn {
+  from {
+    transform: translateX(100%)
+  } to {
+      transform: translateX(0)
+    }
+}
+
+@keyframes slideRightOut {
+  from {
+    transform: translateX(0)
+  } to {
+      transform: translateX(-100%)
+    }
+}
+
+.slide-left-enter-active {
+  animation: slideLeftIn $duration ease-in-out;
+}
+
+.slide-left-leave-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  animation: slideLeftOut $duration ease-in-out;
+}
+
+@keyframes slideLeftIn {
+  from {
+    transform: translateX(-100%)
+  } to {
+      transform: translateX(0)
+    }
+}
+
+@keyframes slideLeftOut {
+  from {
+    transform: translateX(0)
+  } to {
+      transform: translateX(100%)
+    }
+}
